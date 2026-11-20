@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity // representa un objeto en la base de datos
-@Table(name = "Pago") // nombre de la tabla en la base de datos
+@Table(name = "pago") // nombre de la tabla en la base de datos
 public class Pago {
 
     @Id

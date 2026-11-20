@@ -35,4 +35,8 @@ public class Cocina {
     public LocalDateTime getFechaIngreso() {
         return fechaIngreso;
     }
+
+
+    
+
 }
