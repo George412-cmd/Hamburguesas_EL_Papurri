@@ -1,8 +1,10 @@
 package com.prueba1.api1.model;
 
+import java.util.List;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 @Entity
 @Table(name = "pedidos")
@@ -91,6 +93,35 @@ public class Pedido {
     public boolean isConfirmadoCocinero() { return confirmadoCocinero; }
     public void setConfirmadoCocinero(boolean confirmadoCocinero) { this.confirmadoCocinero = confirmadoCocinero; }
 
-    public LocalDateTime getFechaListo() { return fechaListo; }
-    public void setFechaListo(LocalDateTime fechaListo) { this.fechaListo = fechaListo; }
+    public void setEstadoPedido(EstadoPedido estadoPedido) {
+        this.estadoPedido = estadoPedido;
+    }
+
+    //Relación a Pago
+    @OneToOne //Solo un pedido puede tener un pago
+    @JoinColumn(name = "pago_id") // nombre de la columna en la tabla Pedido que hace referencia a Pago
+    private Pago pago;
+
+    //Relación a Detalle Pedido para poner la lista
+
+    @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<DetallePedido> detalles = new ArrayList<>();
+
+    // Getters y setters para las relaciones
+    public Pago getPago() {
+        return pago;
+    }
+
+    public void setPago(Pago pago) {
+        this.pago = pago;
+    }
+
+
+    public List<DetallePedido> getDetalles() {
+        return detalles;
+    }
+
+    public void setDetalles(List<DetallePedido> detalles) {
+        this.detalles = detalles;
+    }
 }
