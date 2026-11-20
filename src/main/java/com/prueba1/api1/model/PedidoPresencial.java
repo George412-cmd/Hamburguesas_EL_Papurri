@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.util.ArrayList;
 
 @Entity // representa un objeto en la base de datos
-@Table(name = "Pedidos") // nombre de la tabla en la base de datos
+@Table(name = "pedidos_presenciales") // nombre de la tabla en la base de datos
 public class PedidoPresencial extends Pedido {
 
     @Id
@@ -13,7 +13,7 @@ public class PedidoPresencial extends Pedido {
 
 
     @Column(nullable = false)
-    private String IdentificadorFisico; // puede ser un numero de mesa
+    private String identificadorFisico; // puede ser un numero de mesa
 
     
     //Relación a Pago
@@ -49,10 +49,10 @@ public class PedidoPresencial extends Pedido {
 
     //Get y set de identificador físico :p
     public String getIdentificadorFisico() {
-        return IdentificadorFisico;
+        return identificadorFisico;
     }
     public void setIdentificadorFisico(String identificadorFisico) {
-        IdentificadorFisico = identificadorFisico;
+        this.identificadorFisico = identificadorFisico;
     }
     
 }
