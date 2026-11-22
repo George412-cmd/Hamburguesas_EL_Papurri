@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "Producto")
+@Table(name = "productos")
 public class Productos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +16,7 @@ public class Productos {
     //Hamburguesas y sus precios
 
     @Column(nullable = false)
-    private String HamburguesaSencilla;
+    private String hamburguesaSencilla;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precioHamburguesaSencilla = BigDecimal.valueOf(60.00);
@@ -25,7 +25,7 @@ public class Productos {
     private BigDecimal precioHamburguesaSencillaCombo = BigDecimal.valueOf(90.00);
 
     @Column(nullable = false)
-    private String HamburguesaHawaiana;
+    private String hamburguesaHawaiana;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precioHamburguesaHawaiana = BigDecimal.valueOf(60.00);
@@ -34,7 +34,7 @@ public class Productos {
     private BigDecimal precioHamburguesaHawaianaCombo = BigDecimal.valueOf(90.00);
 
     @Column(nullable = false)
-    private String HamburguesaFit;
+    private String hamburguesaFit;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precioHamburguesaFit = BigDecimal.valueOf(95.00);
@@ -43,7 +43,7 @@ public class Productos {
     private BigDecimal precioHamburguesaFitCombo = BigDecimal.valueOf(120.00);
 
     @Column(nullable = false)
-    private String HamburguesaPerrona;
+    private String hamburguesaPerrona;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precioHamburguesaPerrona = BigDecimal.valueOf(110.00);
@@ -52,7 +52,7 @@ public class Productos {
     private BigDecimal precioHamburguesaPerronaCombo = BigDecimal.valueOf(140.00);
 
     @Column(nullable = false)
-    private String HamburguesaDoble;
+    private String hamburguesaDoble;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precioHamburguesaDoble = BigDecimal.valueOf(95.00);
@@ -61,7 +61,7 @@ public class Productos {
     private BigDecimal precioHamburguesaDobleCombo = BigDecimal.valueOf(120.00);
 
     @Column(nullable = false)
-    private String HamburguesaRanchera;
+    private String hamburguesaRanchera;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precioHamburguesaRanchera = BigDecimal.valueOf(115.00);
@@ -70,7 +70,7 @@ public class Productos {
     private BigDecimal precioHamburguesaRancheraCombo = BigDecimal.valueOf(145.00);
 
     @Column(nullable = false)
-    private String HamburguesaDePollo;
+    private String hamburguesaDePollo;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precioHamburguesaDePollo = BigDecimal.valueOf(100.00);
@@ -81,7 +81,7 @@ public class Productos {
     //Bebidas y sus precios
     
     @Column(nullable = false)
-    private String AguaJamaica;
+    private String aguaJamaica;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precioAguaJamaicaMedioLitro = BigDecimal.valueOf(25.00);
@@ -90,7 +90,7 @@ public class Productos {
     private BigDecimal precioAguaJamaicaLitro = BigDecimal.valueOf(40.00);
 
     @Column(nullable = false)
-    private String AguaLimon;
+    private String aguaLimon;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precioAguaLimonMedioLitro = BigDecimal.valueOf(20.00);
@@ -102,19 +102,19 @@ public class Productos {
     //Papas y sus precios
 
      @Column(nullable = false)
-    private String PapasOrden;
+    private String papasOrden;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precioPapasOrden = BigDecimal.valueOf(150.00);
 
      @Column(nullable = false)
-    private String PapasEspeciales;
+    private String papasEspeciales;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precioPapasEspeciales = BigDecimal.valueOf(150.00);
 
      @Column(nullable = false)
-    private String PapasSuperEspeciales;
+    private String papasSuperEspeciales;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precioPapasSuperEspeciales = BigDecimal.valueOf(150.00);
@@ -122,13 +122,13 @@ public class Productos {
 
     //Papurris y sus precios
     @Column(nullable = false)
-    private String PapurrisSencilla;
+    private String papurrisSencilla;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precioPapurrisSencilla = BigDecimal.valueOf(150.00);
 
     @Column(nullable = false)
-    private String PapurrisBorracha;
+    private String papurrisBorracha;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precioPapurrisBorracha = BigDecimal.valueOf(150.00);
@@ -153,10 +153,10 @@ public class Productos {
     //Getters y setters para las hamburguesas
 
     public String getHamburguesaSencilla() {
-        return HamburguesaSencilla;
+        return hamburguesaSencilla;
     }
     public void setHamburguesaSencilla(String hamburguesaSencilla) {
-        HamburguesaSencilla = hamburguesaSencilla;
+        this.hamburguesaSencilla = hamburguesaSencilla;
     }
     public BigDecimal getPrecioHamburguesaSencilla() {
         return precioHamburguesaSencilla;
@@ -172,10 +172,10 @@ public class Productos {
     }
 
     public String getHamburguesaFit() {
-        return HamburguesaFit;
+        return hamburguesaFit;
     }
     public void setHamburguesaFit(String hamburguesaFit) {
-        HamburguesaFit = hamburguesaFit;
+        this.hamburguesaFit = hamburguesaFit;
     }
     public BigDecimal getPrecioHamburguesaFit() {
         return precioHamburguesaFit;
@@ -191,10 +191,10 @@ public class Productos {
     }
 
     public String getHamburguesaHawaiana() {
-        return HamburguesaHawaiana;
+        return hamburguesaHawaiana;
     }
     public void setHamburguesaHawaiana(String hamburguesaHawaiana) {
-        HamburguesaHawaiana = hamburguesaHawaiana;
+        this.hamburguesaHawaiana = hamburguesaHawaiana;
     }
     public BigDecimal getPrecioHamburguesaHawaiana() {
         return precioHamburguesaHawaiana;
@@ -210,10 +210,10 @@ public class Productos {
     }
 
     public String getHamburguesaPerrona() {
-        return HamburguesaPerrona;
+        return hamburguesaPerrona;
     }
     public void setHamburguesaPerrona(String hamburguesaPerrona) {
-        HamburguesaPerrona = hamburguesaPerrona;
+        this.hamburguesaPerrona = hamburguesaPerrona;
     }
     public BigDecimal getPrecioHamburguesaPerrona() {
         return precioHamburguesaPerrona;
@@ -229,10 +229,10 @@ public class Productos {
     }
     
     public String getHamburguesaDoble() {
-        return HamburguesaDoble;
+        return hamburguesaDoble;
     }
     public void setHamburguesaDoble(String hamburguesaDoble) {
-        HamburguesaDoble = hamburguesaDoble;
+        this.hamburguesaDoble = hamburguesaDoble;
     }
     public BigDecimal getPrecioHamburguesaDoble() {
         return precioHamburguesaDoble;
@@ -247,10 +247,10 @@ public class Productos {
         this.precioHamburguesaDobleCombo = precioHamburguesaDobleCombo;
     }
     public String getHamburguesaRanchera() {
-        return HamburguesaRanchera;
+        return hamburguesaRanchera;
     }
     public void setHamburguesaRanchera(String hamburguesaRanchera) {
-        HamburguesaRanchera = hamburguesaRanchera;
+        this.hamburguesaRanchera = hamburguesaRanchera;
     }
     public BigDecimal getPrecioHamburguesaRanchera() {
         return precioHamburguesaRanchera;
@@ -266,10 +266,10 @@ public class Productos {
     }
 
     public String getHamburguesaDePollo() {
-        return HamburguesaDePollo;
+        return hamburguesaDePollo;
     }
     public void setHamburguesaDePollo(String hamburguesaDePollo) {
-        HamburguesaDePollo = hamburguesaDePollo;
+        this.hamburguesaDePollo = hamburguesaDePollo;
     }
     public BigDecimal getPrecioHamburguesaDePollo() {
         return precioHamburguesaDePollo;
@@ -289,10 +289,10 @@ public class Productos {
     //Getters y setters para las bebidas
 
     public String getAguaLimon() {
-        return AguaLimon;
+        return aguaLimon;
     }
     public void setAguaLimon(String aguaLimon) {
-        AguaLimon = aguaLimon;
+        this.aguaLimon = aguaLimon;
     }
     public BigDecimal getPrecioAguaLimonMedioLitro() {
         return precioAguaLimonMedioLitro;
@@ -308,10 +308,10 @@ public class Productos {
     }
 
     public String getAguaJamaica() {
-        return AguaJamaica;
+        return aguaJamaica;
     }
     public void setAguaJamaica(String aguaJamaica) {
-        AguaJamaica = aguaJamaica;
+        this.aguaJamaica = aguaJamaica;
     }
     public BigDecimal getPrecioAguaJamaicaMedioLitro() {
         return precioAguaJamaicaMedioLitro;
@@ -329,10 +329,10 @@ public class Productos {
 
     //Getters y setters para las papas
     public String getPapasOrden() {
-        return PapasOrden;
+        return papasOrden;
     }
     public void setPapasOrden(String papasOrden) {
-        PapasOrden = papasOrden;
+        this.papasOrden = papasOrden;
     }
     public BigDecimal getPrecioPapasOrden() {
         return precioPapasOrden;
@@ -342,10 +342,10 @@ public class Productos {
     }
 
     public String getPapasEspeciales() {
-        return PapasEspeciales;
+        return papasEspeciales;
     }
     public void setPapasEspeciales(String papasEspeciales) {
-        PapasEspeciales = papasEspeciales;
+        this.papasEspeciales = papasEspeciales;
     }
     public BigDecimal getPrecioPapasEspeciales() {
         return precioPapasEspeciales;
@@ -355,10 +355,10 @@ public class Productos {
     }
 
     public String getPapasSuperEspeciales() {
-        return PapasSuperEspeciales;
+        return papasSuperEspeciales;
     }
     public void setPapasSuperEspeciales(String papasSuperEspeciales) {
-        PapasSuperEspeciales = papasSuperEspeciales;
+        this.papasSuperEspeciales = papasSuperEspeciales;
     }
     public BigDecimal getPrecioPapasSuperEspeciales() {
         return precioPapasSuperEspeciales;
@@ -371,10 +371,10 @@ public class Productos {
 
     //Getters y setters para las papurris
     public String getPapurrisSencilla() {
-        return PapurrisSencilla;
+        return papurrisSencilla;
     }
     public void setPapurrisSencilla(String papurrisSencilla) {
-        PapurrisSencilla = papurrisSencilla;
+        this.papurrisSencilla = papurrisSencilla;
     }
     public BigDecimal getPrecioPapurrisSencilla() {
         return precioPapurrisSencilla;
@@ -384,10 +384,10 @@ public class Productos {
     }
 
     public String getPapurrisBorracha() {
-        return PapurrisBorracha;
+        return papurrisBorracha;
     }
     public void setPapurrisBorracha(String papurrisBorracha) {
-        PapurrisBorracha = papurrisBorracha;
+        this.papurrisBorracha = papurrisBorracha;
     }
     public BigDecimal getPrecioPapurrisBorracha() {
         return precioPapurrisBorracha;
