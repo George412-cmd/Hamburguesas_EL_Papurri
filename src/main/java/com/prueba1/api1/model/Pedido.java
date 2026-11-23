@@ -57,7 +57,7 @@ public class Pedido {
     private boolean confirmadoCocinero = false;
 
     // hora en que el pedido paso a listo (null mientras no este listo)
-    private LocalDateTime fechaListo;
+    private LocalDateTime fechaListo; //********************************************************* */
 
 
     public Long getId() { return id; }
@@ -76,7 +76,6 @@ public class Pedido {
     public void setFechaPedido(LocalDateTime fechaPedido) { this.fechaPedido = fechaPedido; }
 
     public EstadoPedido getEstadoPedido() { return estadoPedido; }
-    public void setEstadoPedido(EstadoPedido estadoPedido) { this.estadoPedido = estadoPedido; }
 
     public BigDecimal getSubtotal() { return subtotal; }
     public void setSubtotal(BigDecimal subtotal) { this.subtotal = subtotal; }
