@@ -1,5 +1,8 @@
 package com.prueba1.api1.model;
 
-public class EstadoPedido {
-
+public enum EstadoPedido {
+    EnEspera,
+    Listo,
+    Entregado,
+    Cancelado
 }
