@@ -1,7 +1,4 @@
-const pedidos = JSON.parse(sessionStorage.getItem("pedidos")) || [];
-const indice  = Number(sessionStorage.getItem("pedidoACobrar")) || 0;
-const pedido  = pedidos[indice];
-
+console.log("ticket.js cargado");
 
 function dosDigitos(n) {
   return String(n).padStart(2, "0");
@@ -34,26 +31,25 @@ function detalleAgrupado(productos) {
   return html;
 }
 
-function precioProductos(productos) {
-  let suma = 0;
-  for (const producto of productos) {
-    suma += producto.precio;
+async function cargarTicket() {
+
+  const id = Number(sessionStorage.getItem("pedidoACobrar")) || 0;
+
+  const respuesta = await fetch("/api/pedidos/" + id);
+
+  if (!respuesta.ok) {
+    document.querySelector(".ticket__nombreCliente").textContent = "Ticket no encontrado";
+    document.querySelector(".ticket__datos").innerHTML =
+      "<dd>No hay ningun pedido para mostrar.</dd>";
+    return;
   }
-  return suma;
-}
 
-
-if (!pedido) {
-                  
-  document.querySelector(".ticket__nombreCliente").textContent = "Ticket no encontrado";
-  document.querySelector(".ticket__datos").innerHTML =
-    "<dd>No hay ningun pedido para mostrar.</dd>";
-
-} else {
+  const pedido = await respuesta.json();
 
   document.querySelector(".ticket__nombreCliente").textContent = "Ticket de: " + pedido.nombreCliente;
 
-  const fecha = new Date(pedido.cobradoEn);
+  // TODO: confirmar el campo real de fecha de cobro (se asume fechaListo)
+  const fecha = new Date(pedido.fechaListo);
 
   document.querySelector(".contenidof time").textContent = fechaCorta(fecha);
   document.querySelector(".contenidof time").setAttribute("datetime", fechaISO(fecha));
@@ -61,13 +57,15 @@ if (!pedido) {
   document.querySelector(".contenidoh time").textContent = horaCorta(fecha);
   document.querySelector(".contenidoh time").setAttribute("datetime", horaCorta(fecha));
 
-  document.querySelector(".contenidon").textContent   = pedido.numeroPedido;
+  document.querySelector(".contenidon").textContent   = pedido.id;
   document.querySelector(".contenidonom").textContent = pedido.nombreCliente;
 
-                 
   document.querySelector(".ticket__productos").innerHTML = detalleAgrupado(pedido.productos);
 
-  document.querySelector(".contenidopt").textContent = "$" + precioProductos(pedido.productos);
-  document.querySelector(".contenidope").textContent = "$" + pedido.precioExtra;
+  // TODO: confirmar que el backend expone subtotal/extras ya calculados
+  document.querySelector(".contenidopt").textContent = "$" + pedido.subtotal;
+  document.querySelector(".contenidope").textContent = "$" + pedido.extras;
   document.querySelector(".tp strong").textContent    = "$" + pedido.total;
 }
+
+cargarTicket();
