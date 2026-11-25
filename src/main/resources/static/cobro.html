@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cobro | Hamburguesería Papurri</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Londrina+Solid:wght@100;300;400;900&family=Patua+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <p class="header__marca">Hamburguesería Papurri</p>
+    <nav class="nav" aria-label="Menú principal">
+      <ul class="nav__lista">
+        <li><a class="nav__link" href="index.html">Registro de pedidos</a></li>
+        <li><a class="nav__link" href="llegantes.html">Pedidos llegantes</a></li>
+        <li><a class="nav__link" href="listos.html">Pedidos listos</a></li>
+        <li><a class="nav__link" href="historial.html">Historial</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pagina">
+    <h1 class="pagina__titulo">Cobro</h1>
+
+    <div class="pestanas">
+
+      <div class="pestanas__barra" role="tablist" aria-label="Forma de pago">
+        <button class="pestanas__btn" type="button"
+                role="tab" id="tab-transferencia"
+                aria-controls="panel-transferencia" aria-selected="true">
+          Transferencia
+        </button>
+        <button class="pestanas__btn" type="button"
+                role="tab" id="tab-efectivo"
+                aria-controls="panel-efectivo" aria-selected="false">
+          Efectivo
+        </button>
+      </div>
+
+      <section class="pestanas__panel" id="panel-transferencia"
+               role="tabpanel" aria-labelledby="tab-transferencia">
+
+        <form class="cobro" method="get" action="ticket.html">
+
+          <div class="campo campo--cobro">
+            <span class="campo__label campo__label--cobro">Precio:</span>
+            <output class="campo__salida campo__salida--cobro" name="precio"></output>
+          </div>
+
+          <div class="campo campo--cobro">
+            <label class="campo__label campo__label--cobro" for="extraTransferencia">Precio extra:</label>
+            <input class="campo__input campo__input--cobro" type="number" id="extraTransferencia"
+                   name="precioExtra" min="0" step="1" value="0">
+          </div>
+
+          <div class="campo campo--cobro">
+            <span class="campo__label campo__label--cobro">Total:</span>
+            <output class="campo__salida campo__salida--cobro" name="totalTransferencia" for="extraTransferencia"></output>
+          </div>
+
+          <button class="boton boton--principal boton--pago" type="submit">Se reflejó el pago</button>
+
+        </form>
+      </section>
+
+      <section class="pestanas__panel" id="panel-efectivo"
+               role="tabpanel" aria-labelledby="tab-efectivo" hidden>
+
+        <form class="cobro" method="get" action="ticket.html">
+
+          <div class="campo campo--cobro">
+            <span class="campo__label campo__label--cobro">Total:</span>
+            <output class="campo__salida campo__salida--cobro" name="totalEfectivo"></output>
+          </div>
+
+          <div class="campo campo--cobro">
+            <label class="campo__label campo__label--cobro" for="extraEfectivo">Precio extra:</label>
+            <input class="campo__input campo__input--cobro" type="number" id="extraEfectivo"
+                   name="precioExtra" min="0" step="1" value="0">
+          </div>
+
+          <div class="campo campo--cobro">
+            <label class="campo__label campo__label--cobro" for="pago">Pago:</label>
+            <input class="campo__input campo__input--cobro" type="number" id="pago"
+                   name="pago" min="0" step="1">
+          </div>
+
+          <div class="campo campo--cobro">
+            <span class="campo__label campo__label--cobro">Devuelve:</span>
+            <output class="campo__salida campo__salida--cobro" name="devuelve" for="pago extraEfectivo"></output>
+          </div>
+
+          <button class="boton boton--principal boton--terminar" type="submit">Terminar</button>
+
+        </form>
+      </section>
+
+    </div>  </main>
+
+  <script src="js/cobro.js"></script>
+</body>
+</html>

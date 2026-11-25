@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket | Hamburguesería Papurri</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <p class="header__marca">Hamburguesería Papurri</p>
+    <nav class="nav" aria-label="Menú principal">
+      <ul class="nav__lista">
+        <li><a class="nav__link" href="index.html">Registro de pedidos</a></li>
+        <li><a class="nav__link" href="llegantes.html">Pedidos llegantes</a></li>
+        <li><a class="nav__link" href="listos.html">Pedidos listos</a></li>
+        <li><a class="nav__link" href="historial.html">Historial</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pagina">
+
+    <h1 class="pagina__titulo ticket__cabecera">
+      <a class="boton boton--volver boton--regresar-historial" href="historial.html">&larr; Regresar al historial</a>
+      <span class="ticket__nombreCliente">Ticket de: Alexa Hernández</span>
+    </h1>
+
+    <article class="ticket">
+
+      <dl class="ticket__datos">
+
+        <dt class="ticket_titulo">Nombre del establecimiento:</dt>
+        <dd class="contenido">Hamburguesería Papurri</dd>
+
+        <dt class="fecha">Fecha:</dt>
+        <dd class="contenidof"><time datetime="2026-11-06">6/11/26</time></dd>
+
+        <dt class="Horario">Horario de compra:</dt>
+        <dd class="contenidoh"><time datetime="19:53">19:53</time></dd>
+
+        <dt class="ticket_numero">Número de pedido:</dt>
+        <dd class="contenidon">153</dd>
+
+        <dt class="ticket_cliente">Nombre del cliente:</dt>
+        <dd class="contenidonom">Alexa Hernández</dd>
+
+        <dt class="ticket_producto">Productos:</dt>
+        <dd>
+          <ul class="ticket__productos">
+          </ul>
+        </dd>
+
+        <dt class="precio_tot">Precio de productos:</dt>
+        <dd class="contenidopt">$295</dd>
+
+        <dt class="extras">Precio de productos extra:</dt>
+        <dd class="contenidope">$50</dd>
+
+        <dt class="total">Total de la compra:</dt>
+        <dd class="tp"><strong>$345</strong></dd>
+
+      </dl>
+
+    </article>
+
+  </main>
+
+  <script src="js/ticket.js"></script>
+</body>
+</html>

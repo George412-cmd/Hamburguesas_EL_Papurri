@@ -4,6 +4,9 @@ import com.prueba1.api1.model.Cocina;
 import com.prueba1.api1.model.Pedido;
 import com.prueba1.api1.repository.CocinaRepository;
 import com.prueba1.api1.repository.PedidoRepository;
+
+import jakarta.transaction.Transactional;
+
 import org.springframework.stereotype.Service;
 
 @Service
@@ -17,9 +20,10 @@ public class CocinaService {
         this.pedidoRepository = pedidoRepository;
         this.cocinaRepository = cocinaRepository;
     }
-
+    @Transactional
     public Cocina guardarEnCola(Pedido pedido) {
         Pedido guardado = pedidoRepository.save(pedido);
         return cocinaRepository.save(new Cocina(guardado));
     }
+
 }

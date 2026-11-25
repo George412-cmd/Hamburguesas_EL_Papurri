@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario | Hamburguesería Papurri</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Londrina+Solid:wght@100;300;400;900&family=Patua+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <p class="header__marca">Hamburguesería Papurri</p>
+    <nav class="nav" aria-label="Menú principal">
+      <ul class="nav__lista">
+        <li><a class="nav__link" href="index.html">Registro de pedidos</a></li>
+        <li><a class="nav__link" href="llegantes.html">Pedidos llegantes</a></li>
+        <li><a class="nav__link" href="listos.html">Pedidos listos</a></li>
+        <li><a class="nav__link" href="historial.html">Historial</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pagina">
+
+    <h1 class="pagina__titulo">Formulario</h1>
+
+    <form class="formulario" method="get" action="llegantes.html">
+
+      <div class="campo campo--formulario">
+        <label class="campo__label campo__label--formulario" for="numeroPedido">Número de pedido:</label>
+        <input class="campo__input campo__input--formulario" type="text" id="numeroPedido" name="numeroPedido"
+               readonly>
+      </div>
+
+      <div class="campo campo--formulario">
+        <label class="campo__label campo__label--formulario" for="nombreCliente">Nombre del cliente:</label>
+        <input class="campo__input campo__input--formulario" type="text" id="nombreCliente" name="nombreCliente"
+               required autocomplete="name">
+      </div>
+
+      <div class="campo campo--formulario">
+        <label class="campo__label campo__label--formulario" for="telefono">Número de teléfono:</label>
+        <input class="campo__input campo__input--formulario" type="tel" id="telefono" name="telefono"
+               autocomplete="tel">
+      </div>
+
+      <div class="formulario__botones">
+        <a class="boton boton--volver boton--regresar" href="index.html">&larr; Regresar</a>
+        <button class="boton boton--principal boton--continuar-formulario" type="submit">Continuar</button>
+      </div>
+
+    </form>
+
+  </main>
+
+  <script src="js/formulario.js"></script>
+</body>
+</html>
