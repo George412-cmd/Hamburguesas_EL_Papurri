@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de pedidos | Hamburguesería Papurri</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Londrina+Solid:wght@100;300;400;900&family=Patua+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+  <header class="header">
+    <p class="header__marca">Hamburguesería Papurri</p>
+
+    <nav class="nav" aria-label="Menú principal">
+      <ul class="nav__lista">
+        <li><a class="nav__link" href="index.html" aria-current="page">Registro de pedidos</a></li>
+        <li><a class="nav__link" href="llegantes.html">Pedidos llegantes</a></li>
+        <li><a class="nav__link" href="listos.html">Pedidos listos</a></li>
+        <li><a class="nav__link" href="historial.html">Historial</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pagina">
+    <h1 class="pagina__titulo">Registro de pedidos</h1>
+
+    <div class="registro">
+
+      <aside class="secciones" aria-label="Secciones del menú">
+        <h2 class="secciones__titulo">Sección</h2>
+        <ul class="secciones__lista">
+          <li><button class="secciones__btn" type="button" data-seccion="hamburguesas">Hamburguesas</button></li>
+          <li><button class="secciones__btn" type="button" data-seccion="combos">Combos</button></li>
+          <li><button class="secciones__btn" type="button" data-seccion="papas">Papas y burrito</button></li>
+          <li><button class="secciones__btn" type="button" data-seccion="aguas">Aguas</button></li>
+        </ul>
+      </aside>
+
+      <div class="catalogo">
+
+        <section class="catalogo__seccion" id="hamburguesas">
+          <h2 class="catalogo__titulo hamburguesaseparada">Hamburguesas:</h2>
+          <ul class="productos">
+            
+          </ul>
+        </section>
+
+        <section class="catalogo__seccion" id="combos">
+          <h2 class="catalogo__titulo">Combos:</h2>
+          <ul class="productos">
+            
+          </ul>
+        </section>
+
+        <section class="catalogo__seccion" id="papas">
+          <h2 class="catalogo__titulo">Papas y burrito:</h2>
+          <ul class="productos">
+            
+          </ul>
+        </section>
+
+        <section class="catalogo__seccion seccionseparada" id="aguas">
+          <h2 class="catalogo__titulo">Aguas:</h2>
+          <ul class="productos">
+            
+          </ul>
+        </section>
+
+      </div>    </div>
+    <section class="carrito" aria-label="Carrito">
+      <h2 class="carrito__titulo">Carrito:</h2>
+
+      <ul class="carrito__lista">
+        
+        
+      </ul>
+      <div class="total__enviar">
+      <p class="carrito__total">Total: <strong>$0</strong></p>
+
+      <button class="boton boton--principal boton--continuar-carrito" type="button" id="btnContinuar" disabled>Continuar</button>
+      </div>
+    </section>
+    
+  </main>
+
+  <script src="js/menu.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

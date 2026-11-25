@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial | Hamburguesería Papurri</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Londrina+Solid:wght@100;300;400;900&family=Patua+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <p class="header__marca">Hamburguesería Papurri</p>
+    <nav class="nav" aria-label="Menú principal">
+      <ul class="nav__lista">
+        <li><a class="nav__link" href="index.html">Registro de pedidos</a></li>
+        <li><a class="nav__link" href="llegantes.html">Pedidos llegantes</a></li>
+        <li><a class="nav__link" href="listos.html">Pedidos listos</a></li>
+        <li><a class="nav__link" href="historial.html" aria-current="page">Historial</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pagina">
+    <h1 class="pagina__titulo">Historial</h1>
+
+    <table class="historial">
+       <caption class="historial__caption">Pedidos cobrados</caption>
+
+      <thead>
+        <tr>
+          <th class="historial__titulo" scope="col">Fecha</th>
+          <th class="historial__titulo" scope="col">Horario</th>
+          <th class="historial__titulo" scope="col">Número de pedido</th>
+          <th class="historial__titulo" scope="col">Precio total</th>
+          <th class="historial__titulo" scope="col">Nombre del cliente</th>
+          <th class="historial__titulo" scope="col">Ticket</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        
+      </tbody>
+    </table>
+
+  </main>
+
+  <script src="js/historial.js"></script>
+</body>
+</html>
