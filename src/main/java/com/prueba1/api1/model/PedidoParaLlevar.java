@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 @Entity // representa un objeto en la base de datos
-
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE) // se agregara como columna lo que se hereda
 public class PedidoParaLlevar extends Pedido {
 
     @Id
