@@ -56,7 +56,9 @@ public class Pedido {
     @Column(nullable = false)
     private boolean confirmadoCocinero = false;
 
+   
     // hora en que el pedido paso a listo (null mientras no este listo)
+     @Column(nullable = false)
     private LocalDateTime fechaListo; //********************************************************* */
 
 
@@ -91,10 +93,6 @@ public class Pedido {
 
     public boolean isConfirmadoCocinero() { return confirmadoCocinero; }
     public void setConfirmadoCocinero(boolean confirmadoCocinero) { this.confirmadoCocinero = confirmadoCocinero; }
-
-    public void setEstadoPedido(EstadoPedido estadoPedido) {
-        this.estadoPedido = estadoPedido;
-    }
 
     //Relación a Pago
     @OneToOne //Solo un pedido puede tener un pago
