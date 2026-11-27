@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.util.ArrayList;
 
 @Entity // representa un objeto en la base de datos
-@Table(name = "pedidos_presenciales") // nombre de la tabla en la base de datos
+
 public class PedidoPresencial extends Pedido {
 
     @Id

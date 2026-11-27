@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 @Entity // representa un objeto en la base de datos
-@Table(name = "pedidos_para_llevar") // nombre de la tabla en la base de datos
+
 public class PedidoParaLlevar extends Pedido {
 
     @Id
