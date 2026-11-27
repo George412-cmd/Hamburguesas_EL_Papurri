@@ -18,20 +18,30 @@ public class Productos {
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precio;
+    
+    @Column(nullable = false)
+    private String categoria;
 
+    
     @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL)
     private List<DetallePedido> detalles = new ArrayList<>();
 
     public Productos() {
     }
 
-    public Productos(String nombre, BigDecimal precio) {
+    public Productos(String nombre, BigDecimal precio, String categoria) {
         this.nombre = nombre;
         this.precio = precio;
+        this.categoria = categoria;
     }
 
     // Getters y setters
-
+public String getCategoria() {
+        return categoria;
+    }
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
     public Long getId() {
         return id;
     }
